@@ -1,11 +1,19 @@
 @import 'normalize.css';
 @import 'fonts.css';
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
+
     background: var(--static-white);
     color: var(--dark);
+
     font-family: var(--font-family);
     font-weight: 600;
 }
@@ -13,4 +21,35 @@ body {
 .container {
     width: 1440px;
     min-height: 100vh;
+}
+
+a,
+button,
+div {
+    -webkit-tap-highlight-color: transparent;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
 }
