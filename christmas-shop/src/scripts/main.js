@@ -1,24 +1,25 @@
-import "../styles/main.css";
-import javascriptLogo from "../assets/images/javascript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "../scripts/counter.js";
+const updateTimer = () => {
+	const curTime = new Date();
+	const endTime = new Date("2025-01-01T00:00:00");
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`;
+	const diffTime = endTime - curTime;
 
-setupCounter(document.querySelector("#counter"));
+	if (diffTime <= 0) {
+		clearInterval(timeInterval);
+		return;
+	}
+
+	const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+	const hours = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
+	const minutes = Math.floor((diffTime / (1000 * 60)) % 60);
+	const seconds = Math.floor((diffTime / 1000) % 60);
+
+	document.getElementById("days").textContent = days;
+	document.getElementById("hours").textContent = hours;
+	document.getElementById("minutes").textContent = minutes;
+	document.getElementById("seconds").textContent = seconds;
+};
+
+const timeInterval = setInterval(updateTimer, 1000);
+
+updateTimer();
