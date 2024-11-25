@@ -7,7 +7,6 @@ export default defineConfig({
 			input: {
 				index: "index.html",
 				gifts: "src/pages/gifts.html",
-				contact: "src/pages/contacts.html",
 			},
 		},
 	},
