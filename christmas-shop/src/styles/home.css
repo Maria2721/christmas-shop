@@ -73,10 +73,12 @@
         background-color 0.5s ease;
 }
 
-.hero_button:hover,
-.timer_button:hover {
-    background: var(--static-white);
-    color: var(--dark);
+@media (hover: hover) and (pointer: fine) {
+    .hero_button:hover,
+    .timer_button:hover {
+        background: var(--static-white);
+        color: var(--dark);
+    }
 }
 
 /* about section */
@@ -190,7 +192,7 @@
 
 .slider_text,
 .bestGifts_text {
-    width: 426px;
+    max-width: 426px;
     height: 72px;
     display: flex;
     flex-direction: column;
@@ -274,14 +276,18 @@
     transition: border 0.5s ease, background-color 0.5s ease;
 }
 
-.slider_button:hover {
-    border: 1px solid var(--static-white);
-    background-color: var(--static-white);
+@media (hover: hover) and (pointer: fine) {
+    .slider_button:hover {
+        border: 1px solid var(--static-white);
+        background-color: var(--static-white);
+    }
 }
 
-.slider_button:hover>svg path {
-    stroke: var(--primary);
-    transition: stroke 0.5s ease;
+@media (hover: hover) and (pointer: fine) {
+    .slider_button:hover>svg path {
+        stroke: var(--primary);
+        transition: stroke 0.5s ease;
+    }
 }
 
 .slider_button:disabled {

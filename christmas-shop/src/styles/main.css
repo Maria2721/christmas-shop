@@ -111,10 +111,16 @@ button:hover {
     transition: color 0.5s ease, background-color 0.5s ease;
 }
 
-.nav_link:hover,
 .current_link {
     background-color: var(--primary-10);
     color: var(--primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .nav_link:hover {
+        background-color: var(--primary-10);
+        color: var(--primary);
+    }
 }
 
 .current_link {
@@ -176,10 +182,12 @@ button:hover {
     cursor: pointer;
 }
 
-.footer_card:hover>.footer_card__contact,
-.footer_card:hover>.footer_card__title {
-    color: var(--primary);
-    transition: color 0.5s ease;
+@media (hover: hover) and (pointer: fine) {
+    .footer_card:hover>.footer_card__contact,
+    .footer_card:hover>.footer_card__title {
+        color: var(--primary);
+        transition: color 0.5s ease;
+    }
 }
 
 .footer_card__contact {
@@ -226,9 +234,11 @@ button:hover {
     height: 40px;
 }
 
-.footer_social>a:hover>svg path {
-    stroke: var(--primary);
-    transition: stroke 0.5s ease;
+@media (hover: hover) and (pointer: fine) {
+    .footer_social>a:hover>svg path {
+        stroke: var(--primary);
+        transition: stroke 0.5s ease;
+    }
 }
 
 .footer_paragraph {
@@ -251,8 +261,10 @@ button:hover {
     transition: color 0.5s ease;
 }
 
-.footer_caption:hover {
-    color: var(--primary);
+@media (hover: hover) and (pointer: fine) {
+    .footer_caption:hover {
+        color: var(--primary);
+    }
 }
 
 /* Gifts styles */
@@ -267,9 +279,11 @@ button:hover {
     cursor: pointer;
 }
 
-.bestGifts_card:hover .bestGifts_card__header {
-    color: var(--primary);
-    transition: color 0.5s ease;
+@media (hover: hover) and (pointer: fine) {
+    .bestGifts_card:hover .bestGifts_card__header {
+        color: var(--primary);
+        transition: color 0.5s ease;
+    }
 }
 
 .bestGifts_card__imgContainer {
@@ -327,12 +341,13 @@ button:hover {
     text-transform: uppercase;
     color: var(--dark);
 
-    display: -webkit-box;
+    /* styles for text overflow box */
+    /* display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; */
 }
 
 /* responsive styles */

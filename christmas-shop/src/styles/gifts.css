@@ -37,8 +37,7 @@
     text-transform: uppercase;
     text-align: center;
     color: var(--static-white);
-    width: 426px;
-    height: 144px;
+    max-width: 426px;
 }
 
 .gifts_tabs {
@@ -64,8 +63,10 @@
     transition: background-color 0.5s ease;
 }
 
-.gifts_tabs__button:hover {
-    background-color: var(--static-white-20);
+@media (hover: hover) and (pointer: fine) {
+    .gifts_tabs__button:hover {
+        background-color: var(--static-white-20);
+    }
 }
 
 .gifts_tabs__button:disabled {
@@ -92,5 +93,16 @@
 @media (max-width: 648px) {
     .gifts_cards {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 490px) {
+    .gifts_tabs {
+        width: 354px;
+        gap: 0px;
+    }
+
+    .gifts_tabs__button {
+        padding: 12px 8px;
     }
 }
