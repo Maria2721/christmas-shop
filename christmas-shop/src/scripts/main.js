@@ -1,3 +1,10 @@
+/* Slider */
+let slide = 0;
+const prevSlide = () => {};
+
+const nextSlide = () => {};
+
+/* Timer */
 const updateTimer = () => {
 	const curTime = new Date();
 	const endTime = new Date("2025-01-01T00:00:00");

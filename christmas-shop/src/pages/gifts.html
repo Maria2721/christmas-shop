@@ -17,7 +17,11 @@
                     <img src="/logo.svg" alt="Logo" class="header_logo__img" width="24" height="24">
                     <span>the gifts</span>
                 </a>
-                <nav class="nav">
+                <button id="burgerMenu" type="button" class="nav_button">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="navMenu" class="nav">
                     <a href="/maria2721-JSFE2024Q4/christmas-shop/src/pages/gifts.html" title="gifts"
                         class="nav_link link current_link">gifts</a>
                     <a href="/maria2721-JSFE2024Q4/christmas-shop/#about" title="about" class="nav_link link">about</a>
@@ -25,12 +29,6 @@
                     <a href="/maria2721-JSFE2024Q4/christmas-shop/src/pages/gifts.html#contacts" title="contacts"
                         class="nav_link link">contacts</a>
                 </nav>
-                <button type="button" class="nav_button">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 16H30" stroke="#181C29" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10 24H30" stroke="#181C29" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
             </div>
         </header>
         <main>
@@ -242,6 +240,7 @@
             </div>
         </footer>
     </div>
+    <script type="module" src="../scripts/burger-menu.js"></script>
 </body>
 
 </html>
