@@ -3,7 +3,7 @@ import { createCard, fisherYatesShuffle } from "./utils.js";
 const gifts = "/maria2721-JSFE2024Q4/christmas-shop/src/data/gifts.json";
 const bestGiftsCards = document.getElementById("bestGiftsCards");
 
-/* Get 4 random gifts*/
+/* Get 4 random gifts */
 fetch(gifts)
 	.then((response) => {
 		if (!response.ok) {
