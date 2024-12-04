@@ -1,34 +1,34 @@
 @font-face {
     font-family: 'Montserrat';
-    src: url('../assets/fonts/Montserrat-Regular.woff2') format('woff2'), url('../assets/fonts/Montserrat-Regular.woff') format('woff');
+    src: url('/assets/fonts/Montserrat-Regular.woff2') format('woff2'), url('/assets/fonts/Montserrat-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../assets/fonts/Montserrat-SemiBold.woff2') format('woff2'), url('../assets/fonts/Montserrat-SemiBold.woff') format('woff');
+    src: url('/assets/fonts/Montserrat-SemiBold.woff2') format('woff2'), url('/assets/fonts/Montserrat-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Allura';
-    src: url('../assets/fonts/Allura.woff2') format('woff2'), url('../assets/fonts/Allura.woff') format('woff');
+    src: url('/assets/fonts/Allura.woff2') format('woff2'), url('/assets/fonts/Allura.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SF Pro';
-    src: url('../assets/fonts/SFProDisplay-Bold.woff2') format('woff2'), url('../assets/fonts/SFProDisplay-Bold.woff') format('woff');
+    src: url('/assets/fonts/SFProDisplay-Bold.woff2') format('woff2'), url('/assets/fonts/SFProDisplay-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SF Pro';
-    src: url('../assets/fonts/SFProDisplay-Regular.woff2') format('woff2'), url('../assets/fonts/SFProDisplay-Regular.woff') format('woff');
+    src: url('/assets/fonts/SFProDisplay-Regular.woff2') format('woff2'), url('/assets/fonts/SFProDisplay-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }

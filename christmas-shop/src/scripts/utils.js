@@ -9,11 +9,11 @@ export const createCard = (cardData) => {
 	img.className = "bestGifts_card__img";
 	img.src =
 		cardData.category === "For Work"
-			? "/maria2721-JSFE2024Q4/christmas-shop/src/assets/images/gift-for-work.png"
+			? "/maria2721-JSFE2024Q4/christmas-shop/assets/images/gift-for-work.png"
 			: cardData.category === "For Health"
-			? "/maria2721-JSFE2024Q4/christmas-shop/src/assets/images/gift-for-health.png"
+			? "/maria2721-JSFE2024Q4/christmas-shop/assets/images/gift-for-health.png"
 			: cardData.category === "For Harmony"
-			? "/maria2721-JSFE2024Q4/christmas-shop/src/assets/images/gift-for-harmony.png"
+			? "/maria2721-JSFE2024Q4/christmas-shop/assets/images/gift-for-harmony.png"
 			: "";
 	img.alt = cardData.name;
 	img.width = 310;

@@ -6,7 +6,7 @@
     padding: 60px 8px;
     border-radius: 20px 20px 0 0;
     background-color: var(--primary);
-    background-image: url("../assets/images/bg-ball.png"), url("../assets/images/bg-snow.png");
+    background-image: url("/assets/images/bg-ball.png"), url("/assets/images/bg-snow.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@
     width: 100%;
     padding: 60px 8px;
     background-color: var(--primary);
-    background-image: url("../assets/images/bg-snow.png");
+    background-image: url("/assets/images/bg-snow.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -168,7 +168,7 @@
     height: 488px;
     padding: 60px 8px;
     background-color: var(--primary);
-    background-image: url("../assets/images/bg-snow.png");
+    background-image: url("/assets/images/bg-snow.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -304,7 +304,7 @@
     width: 100%;
     padding: 60px 8px;
     background-color: var(--primary);
-    background-image: url("../assets/images/bg-snow.png");
+    background-image: url("/assets/images/bg-snow.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -341,7 +341,7 @@
     padding: 60px 8px;
     border-radius: 0 0 20px 20px;
     background-color: var(--primary);
-    background-image: url("../assets/images/bg-forest.png"), url("../assets/images/bg-snow.png");
+    background-image: url("/assets/images/bg-forest.png"), url("/assets/images/bg-snow.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
