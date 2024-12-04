@@ -36,7 +36,7 @@ export const createCard = (cardData) => {
 	tag.textContent = cardData.category;
 	const header = document.createElement("h3");
 	header.className = "bestGifts_card__header";
-	header.textContent = cardData.description;
+	header.textContent = cardData.name;
 	textContainer.appendChild(tag);
 	textContainer.appendChild(header);
 

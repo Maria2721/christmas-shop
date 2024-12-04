@@ -12,9 +12,11 @@ const handleMenuByLink = (event, link) => {
 	event.preventDefault();
 	handleMenu();
 
-	setTimeout(() => {
-		window.location.href = link.href;
-	}, 450);
+	if (!link.classList.contains("current_link")) {
+		setTimeout(() => {
+			window.location.href = link.href;
+		}, 450);
+	}
 };
 
 burgerMenu.addEventListener("click", handleMenu);

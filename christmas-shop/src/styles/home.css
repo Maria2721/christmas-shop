@@ -235,7 +235,6 @@
 }
 
 .slider_row {
-    padding: 0 82px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -417,12 +416,6 @@
 }
 
 /* responsive styles */
-@media (max-width: 1439px) {
-    .slider_row {
-        padding: 0 8px;
-    }
-}
-
 @media (max-width: 1292px) {
     .bestGifts_cards {
         grid-template-columns: repeat(2, 1fr);

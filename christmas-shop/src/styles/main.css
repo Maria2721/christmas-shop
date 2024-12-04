@@ -423,6 +423,10 @@ button:hover {
     body.hidden {
         overflow: hidden;
     }
+
+    .current_link {
+        pointer-events: auto;
+    }
 }
 
 @media (max-width: 380px) {

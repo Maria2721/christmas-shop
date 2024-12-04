@@ -1,6 +1,6 @@
 const updateTimer = () => {
-	const curTime = new Date();
-	const endTime = new Date("2025-01-01T00:00:00");
+	const curTime = Date.now();
+	const endTime = Date.parse("2025-01-01T00:00:00Z");
 
 	const diffTime = endTime - curTime;
 

@@ -36,18 +36,16 @@ rightSlide.addEventListener("click", () => {
 const getValueFromScreenWidth = () => {
 	padding = window.innerWidth <= 1439 ? 8 : 82;
 	clicks = window.innerWidth <= 768 ? 6 : 3;
-
-	if (window.innerWidth <= 1439) {
-		document.querySelector(
-			".slider_container"
-		).style.width = `calc(100vw - ${scrollbarWidth}px)`;
-	} else {
-		document.querySelector(
-			".slider_container"
-		).style.width = `calc(100% + 82px + 82px)`;
-	}
-
 	slide = 0;
+
+	const sliderSection = document.querySelector(".slider");
+	const sliderContainer = document.querySelector(".slider_container");
+	if (sliderSection && sliderContainer) {
+		sliderContainer.style.width = `${sliderSection.offsetWidth}px`;
+	}
+	const sliderRow = document.querySelector(".slider_row");
+	sliderRow.style.padding = `0 ${padding}px`;
+
 	handleSlider();
 };
 
