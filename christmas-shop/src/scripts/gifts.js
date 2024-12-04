@@ -55,3 +55,23 @@ healthTab.addEventListener("click", () => handleTab("For Health"));
 harmonyTab.addEventListener("click", () => handleTab("For Harmony"));
 
 handleTab("All");
+
+/* BackToTop button */
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+	if (window.scrollY > 300) {
+		backToTop.classList.add("show");
+	} else {
+		backToTop.classList.remove("show");
+	}
+});
+
+const scrollToTop = () => {
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth",
+	});
+};
+
+backToTop.addEventListener("click", () => scrollToTop());

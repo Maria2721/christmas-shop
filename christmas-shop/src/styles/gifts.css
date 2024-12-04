@@ -106,3 +106,33 @@
         padding: 12px 8px;
     }
 }
+
+/* backToTop button */
+.backToTop_button {
+    display: none;
+    position: fixed;
+    bottom: 3vw;
+    right: 3vw;
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    background-color: var(--static-white);
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .backToTop_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .backToTop_button.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
