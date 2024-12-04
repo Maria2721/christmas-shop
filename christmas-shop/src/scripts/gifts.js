@@ -1,46 +1,32 @@
+import gifts from "../data/gifts.json";
 import { createCard, fisherYatesShuffle } from "./utils.js";
 
-const gifts = "../data/gifts.json";
 const giftsCards = document.getElementById("giftsCards");
 const allTab = document.getElementById("allTab");
 const workTab = document.getElementById("workTab");
 const healthTab = document.getElementById("healthTab");
 const harmonyTab = document.getElementById("harmonyTab");
-let giftsData = [];
-
-/* Get data gifts */
-fetch(gifts)
-	.then((response) => {
-		if (!response.ok) {
-			throw new Error("Failed to load JSON");
-		}
-		return response.json();
-	})
-	.then((data) => {
-		giftsData = data;
-		const shuffledData = fisherYatesShuffle([...data]);
-		shuffledData.forEach((item) => {
-			const card = createCard(item);
-			giftsCards.appendChild(card);
-		});
-		allTab.disabled = true;
-	})
-	.catch(() => {
-		console.log("Error loading JSON!");
-	});
 
 /* Handle tab and filter gifts */
 const handleTab = (tab) => {
 	giftsCards.innerHTML = "";
 
-	const filterData = giftsData.filter((item) => {
+	const filterData = gifts.filter((item) => {
 		return item.category === tab || tab === "All";
 	});
 
-	filterData.forEach((item) => {
-		const card = createCard(item);
-		giftsCards.appendChild(card);
-	});
+	if (tab === "All") {
+		const shuffledData = fisherYatesShuffle([...gifts]);
+		shuffledData.forEach((item) => {
+			const card = createCard(item);
+			giftsCards.appendChild(card);
+		});
+	} else {
+		filterData.forEach((item) => {
+			const card = createCard(item);
+			giftsCards.appendChild(card);
+		});
+	}
 
 	updateButtons(tab);
 };
@@ -67,3 +53,5 @@ allTab.addEventListener("click", () => handleTab("All"));
 workTab.addEventListener("click", () => handleTab("For Work"));
 healthTab.addEventListener("click", () => handleTab("For Health"));
 harmonyTab.addEventListener("click", () => handleTab("For Harmony"));
+
+handleTab("All");
