@@ -111,8 +111,8 @@
 .backToTop_button {
     display: none;
     position: fixed;
-    bottom: 3vw;
-    right: 3vw;
+    bottom: 8px;
+    right: 8px;
     border: 1px solid var(--primary);
     border-radius: 50%;
     width: 56px;

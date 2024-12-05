@@ -1,11 +1,17 @@
 import gifts from "../data/gifts.json";
-import { createCard, fisherYatesShuffle } from "./utils.js";
+import {
+	createCard,
+	fisherYatesShuffle,
+	getCardDetails,
+	createModal,
+} from "./utils.js";
 
 const giftsCards = document.getElementById("giftsCards");
 const allTab = document.getElementById("allTab");
 const workTab = document.getElementById("workTab");
 const healthTab = document.getElementById("healthTab");
 const harmonyTab = document.getElementById("harmonyTab");
+const modal = document.getElementById("modal");
 
 /* Handle tab and filter gifts */
 const handleTab = (tab) => {
@@ -75,3 +81,35 @@ const scrollToTop = () => {
 };
 
 backToTop.addEventListener("click", () => scrollToTop());
+
+/* Modal for gift */
+const openModal = (card) => {
+	const name = getCardDetails(card);
+	const cardData = gifts.find((item) => item.name === name);
+	const modalGift = createModal(cardData);
+	modal.innerHTML = "";
+	modal.appendChild(modalGift);
+
+	modal.classList.add("open");
+	document.body.style.overflow = "hidden";
+};
+
+const closeModal = () => {
+	modal.classList.remove("open");
+	document.body.style.overflow = "";
+	modal.innerHTML = "";
+};
+
+giftsCards.addEventListener("click", (event) => {
+	const card = event.target.closest(".bestGifts_card");
+	if (card) {
+		openModal(card);
+	}
+});
+
+modal.addEventListener("click", (event) => {
+	const modalClose = event.target.closest(".modal_close");
+	if (event.target.classList.contains("modal") || modalClose) {
+		closeModal();
+	}
+});
