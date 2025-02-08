@@ -9,11 +9,11 @@ export const createCard = (cardData) => {
 	img.className = "bestGifts_card__img";
 	img.src =
 		cardData.category === "For Work"
-			? "/maria2721-JSFE2024Q4/christmas-shop/assets/images/gift-for-work.png"
+			? "/assets/images/gift-for-work.png"
 			: cardData.category === "For Health"
-			? "/maria2721-JSFE2024Q4/christmas-shop/assets/images/gift-for-health.png"
+			? "/assets/images/gift-for-health.png"
 			: cardData.category === "For Harmony"
-			? "/maria2721-JSFE2024Q4/christmas-shop/assets/images/gift-for-harmony.png"
+			? "/assets/images/gift-for-harmony.png"
 			: "";
 	img.alt = cardData.name;
 	img.width = 310;
@@ -64,8 +64,7 @@ export const createSuperpower = (title, value) => {
 	for (let i = 0; i < 5; i++) {
 		const snowflake = document.createElement("img");
 		snowflake.className = "snowflake__img";
-		snowflake.src =
-			"/maria2721-JSFE2024Q4/christmas-shop/assets/images/snowflake.svg";
+		snowflake.src = "/assets/images/snowflake.svg";
 		snowflake.alt = "Snowflake";
 		snowflake.width = 16;
 		snowflake.height = 16;
@@ -119,11 +118,11 @@ export const createModal = (modalData) => {
 	img.className = "modal_gift__img";
 	img.src =
 		modalData.category === "For Work"
-			? "/maria2721-JSFE2024Q4/christmas-shop/assets/images/gift-for-work.png"
+			? "/assets/images/gift-for-work.png"
 			: modalData.category === "For Health"
-			? "/maria2721-JSFE2024Q4/christmas-shop/assets/images/gift-for-health.png"
+			? "/assets/images/gift-for-health.png"
 			: modalData.category === "For Harmony"
-			? "/maria2721-JSFE2024Q4/christmas-shop/assets/images/gift-for-harmony.png"
+			? "/assets/images/gift-for-harmony.png"
 			: "";
 	img.alt = modalData.name;
 	img.width = 310;

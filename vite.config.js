@@ -10,5 +10,5 @@ export default defineConfig({
 			},
 		},
 	},
-	base: "/maria2721-JSFE2024Q4/christmas-shop/",
+	base: "/",
 });

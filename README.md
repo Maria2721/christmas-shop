@@ -1,5 +1,5 @@
-# maria2721-JSFE2024Q4
+# Christmas Shop
 
-## Tasks
+## Result
 
--   Christmas Shop - https://rolling-scopes-school.github.io/maria2721-JSFE2024Q4/christmas-shop/
+https://maria2721.github.io/christmas-shop/
